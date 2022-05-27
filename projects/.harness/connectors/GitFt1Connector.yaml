@@ -1,0 +1,24 @@
+connector:
+  name: GitFt1Connector
+  identifier: GitFt1Connector
+  description:
+  orgIdentifier: default
+  projectIdentifier: GitFt1
+  type: Github
+  spec:
+    url: https://github.com/VikasChowdary/GitFt1
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: VikasChowdary
+          tokenRef: patForGithub
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: patForGithub
+    delegateSelectors:
+    - acctgroup
+    executeOnDelegate: true
+    type: Repo
